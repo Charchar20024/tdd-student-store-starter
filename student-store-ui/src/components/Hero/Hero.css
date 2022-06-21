@@ -1,0 +1,35 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 50vh;
+    min-width: 100vh;
+    background-color: #f3f6f4;
+    float: right;
+  }
+
+  .hero-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    min-height: 50vh;
+    width: 80vw;
+    background-color: #13c385;
+    margin: 0 auto; 
+    padding: 10px  60px 10px;
+   
+  }
+  .info{
+    position:relative;
+    padding-top: 100px;
+  }
+  img{
+      width: 20vw;
+  }
+  h1{
+      font-size: 50px;
+  }
+  
+
+

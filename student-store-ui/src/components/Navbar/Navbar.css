@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    height: 10vh;
+    width: 97vw;
+    float: right;
+    background-color: #2c4147;
+
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-around;
+  }
+ 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+  }
+  li{
+      display: inline-block;
+      padding: 30px;
+      color: white;
+  }
+  .socials{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 30px;
+    color: white;
+   
+    
+  }
+  span {
+    width: 50px;
+    height: 50px;
+    
+  } 
