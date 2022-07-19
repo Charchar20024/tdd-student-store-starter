@@ -1,0 +1,25 @@
+.product-detail {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+.product-img{
+    width: 500px;
+    height: 500px;
+}
+.all{
+    border: solid 1px rgb(194, 193, 193);
+    padding: 10px;
+    background-color: white;
+}

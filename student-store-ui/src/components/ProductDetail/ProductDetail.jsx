@@ -9,7 +9,7 @@ export default function ProductDetail() {
   let getId = useParams()
   console.log(getId)
 
-  const [product, setProduct] = useState({})
+  const [productDetail, setProductDetail] = useState({})
 
   let url =`https://codepath-store-api.herokuapp.com/store/${getId.productId}`
 
@@ -20,8 +20,8 @@ export default function ProductDetail() {
       try{
         const res = await axios.get(`https://codepath-store-api.herokuapp.com/store/${getId.productId}`)
         console.log(res)
-        if(res?.data?.product){
-          setProduct(res.data)
+        if(res?.data.product){
+          setProductDetail(res.data.product)
         }
         }catch(err){
           console.log(err)
@@ -29,12 +29,14 @@ export default function ProductDetail() {
       }
       fetchProduct()
   },[])
-  console.log(product)
+  console.log(productDetail)
   
   return (
+    <div className="product-detail">
     <ProductView
-    product={product} />
-    
+    product={productDetail}
+    productId={productDetail.id} />
+    </div>
     )
   }
   
