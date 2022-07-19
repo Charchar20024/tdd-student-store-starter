@@ -9,6 +9,7 @@ import {
   faTwitter,
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   {
@@ -33,7 +34,9 @@ export default function Navbar() {
   return (
     <div className="nav-container">
     <nav className="navbar">
-      <img src="/images/codepath.f1b3e41a.svg" alt="" />
+      <Link to="/">
+      <img className= "nav-image"src="/images/codepath.f1b3e41a.svg" alt="" />
+      </Link>
       <div className="socials">
         <span>
         <FontAwesomeIcon icon={faFacebookSquare} />

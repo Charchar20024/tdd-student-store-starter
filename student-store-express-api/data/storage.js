@@ -1,16 +1,16 @@
-const path = require("path")
-const low = require("lowdb")
-const FileSync = require("lowdb/adapters/FileSync")
+import { join, dirname } from 'path'
+import { Low, JSONFile } from 'lowdb'
+import fileSync} 
 
 class Storage {
   constructor() {
-    this.path = path.resolve(__dirname, "db.json")
+    this.path = `${dirname}/db.json`
     this.setup()
   }
 
   async setup() {
-    const adapter = new FileSync(this.path)
-    this.db = low(adapter)
+    const adapter = new JSONFile(file)
+    this.db = new Low(adapter)
     this.db.defaults({ purchases: [], products: [] }).write()
   }
 

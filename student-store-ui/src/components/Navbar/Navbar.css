@@ -9,6 +9,9 @@
     overflow: hidden;
     justify-content: space-around;
   }
+  .nav-image{
+    width: 75px;
+  }
  
   ul {
     list-style-type: none;

@@ -1,18 +1,38 @@
 import * as React from "react"
 import Hero from "../Home/Hero"
+import ContactUs from "./ContactUs"
+import About from "./About"
+import Footer from "./Footer"
+import ProductGrid from "./ProductGrid"
+import SubNav from "./SubNav"
 
 
 import "./Home.css"
 
-export default function Home() {
+
+
+export default function Home({products,handleCategoryChange,selectedCategory,setSelectedCategory,setForm,form  }) {
+  
+
   return (
     <div className="home">
       <Hero />
-      <div className="h">
-        <h3><strong>Best Selling Products</strong></h3>
-      </div>
-      
+      <SubNav
+      products={products}
+      handleCategoryChange={handleCategoryChange}
+      setSelectedCategory={setSelectedCategory}
+      setForm={setForm}
+      form={form}
+      />
+        
+      <ProductGrid 
+      products={products}
+      selectedCategory={selectedCategory}
+      form={form}
+      />
+      <About />
+      <ContactUs />
+      <Footer />
     </div>
   )
 }
-

@@ -1,0 +1,47 @@
+.productCard {
+    height: 350px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: solid 1px rgb(194, 193, 193);
+  }
+.productCard img {
+    height: 250px;
+    width: 100%;
+  }
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+  }
+.product-info {
+    flex: 1;
+    display: flex;
+    
+  }
+.products-name{
+  font-size: 15px;
+
+  }
+  .product-price{
+    font-size: 15px;
+
+  }
+.product-title{
+    display: flex;
+    flex-direction: row;
+
+}
+.product-title button{
+    color: #13c385;
+    width: 25px;
+  
+
+    border: solid 1px #13c385;;
+}
+.product-title div{
+    padding: 0px 8px;
+}

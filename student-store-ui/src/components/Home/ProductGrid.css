@@ -1,0 +1,29 @@
+.product-grid {
+    width: 100%;
+    max-width: 100vw;
+    
+  }
+.contents {
+    max-width: 100vw;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 80vw;
+  
+    margin: 0 auto; 
+    padding: 10px  40px 10px;
+  }
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-title{
+    padding: 10px  140px 10px;
+
+}
