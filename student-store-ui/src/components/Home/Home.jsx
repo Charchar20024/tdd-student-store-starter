@@ -11,7 +11,7 @@ import "./Home.css"
 
 
 
-export default function Home({products,handleCategoryChange,selectedCategory,setSelectedCategory,setForm,form  }) {
+export default function Home({products,handleCategoryChange,selectedCategory,setSelectedCategory,setForm,form, handleAddItemToCart}) {
   
 
   return (
@@ -29,6 +29,7 @@ export default function Home({products,handleCategoryChange,selectedCategory,set
       products={products}
       selectedCategory={selectedCategory}
       form={form}
+      
       />
       <About />
       <ContactUs />

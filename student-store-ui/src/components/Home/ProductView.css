@@ -22,4 +22,21 @@
     border: solid 1px rgb(194, 193, 193);
     padding: 10px;
     background-color: white;
+    width: 500px;
+}
+.btns{
+    
+    float: right;
+    
+}
+.product-description{
+    font-size: 15px;
+
+}
+.btns button{
+   
+    color: #13c385;
+    border: solid 1px #13c385;
+    padding: 5px 10px;
+
 }

@@ -21,31 +21,33 @@ export default function App() {
   const [error, setError] = useState(null)
   const [isFetching, setIsFetching] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [shoppingCart, setShoppingCart] = useState({itemId: null , quantity: 0})
+  const [shoppingCarts, setShoppingCarts] = useState({itemId: null , quantity: 0})
   const [form, setForm] = useState({
     search: ""
   })
+  
+  console.log(shoppingCarts.itemId)
 
-  function handleAddItemToCart(productId){
-    if(productId){
-      setShoppingCart({
+  const handleAddItemToCart = async () => {
+    var quantity ;
 
-      })
+    quantity = 1+quantity
+    console.log(quantity)
 
-      
+   
     }
+ 
 
-  }
+  
 
   useEffect(()=>{
     const fetchProducts = async()=>{
     setIsFetching(true)
     try{
-      const res = await axios.get("https://codepath-store-api.herokuapp.com/store")
+      const res = await axios.get("http://localhost:3001/store/product")
       if(res?.data?.products){
         setError(null)
         setProducts(res.data.products)
-     console.log(products) 
     }
     }catch(err){
         console.log(err)
@@ -56,10 +58,6 @@ export default function App() {
     fetchProducts()
   },[])
 
-  
-  
-  
-   console.log(selectedCategory)
 
   return (
     <div className="app">
@@ -74,13 +72,8 @@ export default function App() {
             setSelectedCategory={setSelectedCategory}
             setForm={setForm}
             form={form}
-            
             />} />
-             {/* <Route path = "*" element={
-               <NotFound />
-             }/> */}
             <Route path="/products/:productId" element={<ProductDetail 
-          
             setError = {setError}/>}
             setIsFetching={setIsFetching} /> 
           </Routes>
@@ -89,3 +82,4 @@ export default function App() {
     </div>
   )
 }
+

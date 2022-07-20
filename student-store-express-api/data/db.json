@@ -145,5 +145,12 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "name": "Coconut Water",
+      "quantity": 1,
+      "price": 3.25,
+      "total": "3.25"
+    }
+  ]
 }

@@ -52,11 +52,95 @@
 }
 span {
     width: 50px;
-    height: 10vh;
+    height: 6vh;
+    
     
   } 
 .sidebarElementsExpanded{
     color: white;
     text-align: center;
     
+}
+.cartTable{
+    width: 100%;
+    margin: 0 10px;
+    color: black;
+    padding-top: 50px;
+    padding-left: 25px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    
+    background: white;
+    border: solid 1px gray;
+    border-radius: 4px;
+    width:45vw;
+    color: white;
+
+}
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0px 10px;
+    padding-top: 10px;
+    background: #2c4047;
+    margin-bottom: 15px;
+}
+.product-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding: 0px 10px;
+    margin-top: 10px;
+    border-bottom: solid 1px #e4e4e4;
+    color: black;
+}
+
+.receipt{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.receipt-subtotal, .receipt-taxes, .receipt-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: black;
+
+}
+.cheackoutButton{
+    color: white;
+    border: solid 1px white;
+    padding: 10px 30px;
+    
+}
+
+.name, .email {
+    width: 90%;
+    height: 36px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: solid 1px #e4e4e4;
+    flex: 1;
+    font-size: 16px;
+
+}
+.no-items{
+    padding: 30px 0px;
+
+}
+.receipt-item{
+    padding: 7px 10px;
+}
+h4{
+    color: white;
+
 }

@@ -18,7 +18,7 @@ export default function ProductDetail() {
   useEffect(()=>{
     const fetchProduct = async()=>{
       try{
-        const res = await axios.get(`https://codepath-store-api.herokuapp.com/store/${getId.productId}`)
+        const res = await axios.get(`http://localhost:3001/store/product/${getId.productId}`)
         console.log(res)
         if(res?.data.product){
           setProductDetail(res.data.product)

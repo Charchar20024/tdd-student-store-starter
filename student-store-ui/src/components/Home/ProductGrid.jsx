@@ -3,27 +3,8 @@ import ProductCard from "./ProductCard"
 import "./ProductGrid.css"
 
 
-export default function ProductGrid({products,selectedCategory, form}) {
-  console.log(form)
-  if(selectedCategory==="all"){
-  return (
-    <div className="product-grid">
-      <h3 className="product-title">Best Selling Products</h3> 
-      <div className="contents">
-       
-        <div className="grid">
-          {products?.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-            />
-          ))}
-    </div>
-  </div>
-</div>
-    
-  )
-}else if(form.search.length > 0){
+export default function ProductGrid({products,selectedCategory, form,}) {
+ if(form.search.length > 0){
   return (
     <div className="product-grid">
       <h3 className="product-title">Best Selling Products</h3> 
@@ -34,12 +15,32 @@ export default function ProductGrid({products,selectedCategory, form}) {
             <ProductCard
               key={product.id}
               product={product}
+             
             />
           ))}
     </div>
   </div>
 </div>
-)
+)}else if(selectedCategory==="all"){
+  return (
+    <div className="product-grid">
+      <h3 className="product-title">Best Selling Products</h3> 
+      <div className="contents">
+       
+        <div className="grid">
+          {products?.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+             
+            />
+          ))}
+    </div>
+  </div>
+</div>
+    
+  )
+
 }else if(selectedCategory==="food"||selectedCategory==="clothing"||selectedCategory==="tech"||selectedCategory==="accessories"){ 
   return (
     <div className="product-grid">
@@ -51,12 +52,14 @@ export default function ProductGrid({products,selectedCategory, form}) {
             <ProductCard
               key={product.id}
               product={product}
+              
             />
           ))}
     </div>
   </div>
 </div>
-)
 
+
+)
 }
 }

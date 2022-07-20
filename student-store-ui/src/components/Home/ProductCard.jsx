@@ -1,30 +1,61 @@
 import * as React from "react"
+import axios from 'axios';
+import { useParams } from "react-router-dom"
 
 import "./ProductCard.css"
 import { Link } from "react-router-dom"
 
+
 export default function ProductCard({product}) {
+  // const handleOnSubmit = async () => {
+   
+  //   setShoppingCart.itemId(...shoppingCart,product.id)
+  // }
+  
+
+  const handleOnSubmit = async () => {
+   
+    try {
+    await axios.post("http://localhost:3001/store/shoppingCart", {
+         id: product.id,
+         quantity: 1,
+        
+       
+      })
+    
+    
+      
+    } catch (err) {
+      console.log(err)
+    }
+  }
   
   return (
-  <Link to={"/products/"+ product.id}>
+  
     <div className="productCard">
-      <img src={product.image} alt="product" />
+      <Link to={"/products/"+ product.id}>
+        <img src={product.image} alt="product" /> 
+      </Link>
+      
       <div className="product-info">
         <div className="info">
-          
-            <p className="products-name"><b>{product.name}</b></p> 
-            <div className="product-title">
-           <div>
-            <button>+</button></div>
-            <div>
-            <button>-</button></div>
-            </div>
-            <p className="product-price">$ {product.price}</p>
+        <div>
+          <p className="products-name"><b><Link to={"/products/"+ product.id}>{product.name}</Link></b></p>
         </div>
-     </div>
-    <div>
+          <div className="btns">
+          <p className="product-price">$ {product.price}</p>
+          <div>
+          <button onClick={handleOnSubmit}>+</button>
+          &nbsp;
+          
+          <button>-</button>
+          </div>
+       
+      
+          </div>
+          </div>
   </div>
  </div>
- </Link>
+
   )
 }

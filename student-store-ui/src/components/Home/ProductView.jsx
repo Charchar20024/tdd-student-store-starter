@@ -16,21 +16,25 @@ export default function ProductView({product, productId}) {
                 </div>
                 <div className="all">
                     <div className="details">
-          <p className="products-name"><b>{product.name}</b></p> 
+          <h4 >{product.name}</h4> 
           <p className="product-price">$ {product.price}</p>
           </div>
-          <h6 className="product-description"> {product.description}</h6>
-              <div className="product-title">
-         <div>
-          <button>+</button></div>
-          <div>
-          <button>-</button></div>
-          </div>
+          <p className="product-description"> {product.description}</p>
+             
+         <div className="btns">
+           
+          <button>+</button>
+          &nbsp;
+          
+          <button>-</button>
+          
+          
       
           </div>
       </div>
    </div>
   <div>
+</div>
 </div>
 </div>
 </div>
